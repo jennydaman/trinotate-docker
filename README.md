@@ -14,7 +14,7 @@ Built images can be obtained from:
 
 Docker Hub: https://hub.docker.com/r/jennydaman/trinotate
 <br />
-Apptainer (Singularity) Image: ...
+Apptainer (Singularity) Image: See [Releases](https://github.com/jennydaman/trinotate-docker/releases)
 
 This section will describe usage with _Apptainer_.
 
