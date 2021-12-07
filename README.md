@@ -12,7 +12,7 @@ supported solution.
 
 Built images can be obtained from:
 
-Docker Hub: ...
+Docker Hub: https://hub.docker.com/r/jennydaman/trinotate
 <br />
 Apptainer (Singularity) Image: ...
 
