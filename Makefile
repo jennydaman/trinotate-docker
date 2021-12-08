@@ -1,13 +1,10 @@
 # purpose: build Trinotate using docker and Singularity
 
-base: Dockerfile.trinotate
-	docker build -t localhost:5000/trinotate/base -f $< .
+trinotate.sif: image
+	singularity build $@ docker-daemon://localhost:5000/trinotate/trinotate:latest
 
-withdata: Dockerfile.withdata
-	docker build -t localhost:5000/trinotate/withdata -f $< .
-
-trinotate.sif: withdata
-	singularity build $@ docker-daemon://localhost:5000/trinotate/withdata:latest
+image: Dockerfile
+	docker build -t localhost:5000/trinotate/trinotate -f $< .
 
 clean:
 	$(RM) *.sif

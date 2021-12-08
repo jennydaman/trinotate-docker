@@ -1,8 +1,0 @@
-# according to: https://github.com/Trinotate/Trinotate.github.io/wiki/Software-installation-and-data-required
-# revision: https://github.com/Trinotate/Trinotate.github.io/wiki/Software-installation-and-data-required/dcb4c6f476c619b56cff8bc357e7ab153049f2a8#2-sequence-databases-required
-FROM localhost:5000/trinotate/base
-
-WORKDIR /var/local/trinotate
-RUN Build_Trinotate_Boilerplate_SQLite_db.pl Trinotate
-RUN makeblastdb -in uniprot_sprot.pep -dbtype prot
-RUN gunzip Pfam-A.hmm.gz && hmmpress Pfam-A.hmm
